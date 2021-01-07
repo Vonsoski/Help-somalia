@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat;
+}
+
+nav{
+    background: rgba(0, 0, 0, 0.863);
+    height: 100px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+.logo a:hover{
+    background: none;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: rgb(42, 128, 226);
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{ 
+        display: block;
+    }
+    nav {
+        height: 80px;
+        background: black;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(42, 128, 226, 0.733);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(0, 0, 0);
+    }
+    #check:checked ~ul{
+        left: 0;
+    }
+}
+
+.container-1 .container{
+    max-width: 960px;
+    margin-top: 70px;
+    border-bottom: 1px solid black;
+}
+
+.row a:hover{
+    background: none;
+}
+
+@media (max-width: 640px){
+    .row img {
+        width: 30px;
+    }
+    
+}
+
+/*container 2*/
+
+.container-2 {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.container-2 h1{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 960px){
+    iframe {
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .container-2 .col-6{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
